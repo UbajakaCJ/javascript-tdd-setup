@@ -1,0 +1,40 @@
+"""Sum of Prime Numbers """
+
+<script>
+function sum_of_primes(value) {
+    var primes = [];
+    var primeNumbers = [];
+    var sum_of_primeNumbers = [];
+    for(var i = 2; i < value + 1; i++) {
+        primes[i] = true;
+    }
+    var limit = Math.sqrt(value + 1);
+    for(var i = 2; i < limit; i++) {
+        if(primes[i] === true) {
+            for(var j = i * i; j < value + 1; j += i) {
+                primes[j] = false;
+            }
+        }
+    }
+    for(var i = 2; i < value + 1; i++) {
+        if(primes[i] === true) {
+            /*console.log(i + " " + primes[i]);*/
+            primeNumbers.push(i)
+            var sum = primeNumbers.reduce((a, b) => a + b, 0);
+            sum_of_primeNumbers = sum;
+            
+            
+            /*console.log(sum_of_primeNumbers);*/
+
+        }
+
+    
+    
+        
+    }
+    /*console.log(sum_of_primeNumbers);*/
+    return sum_of_primeNumbers;
+}
+
+console.log(sum_of_primes(19));
+</script>

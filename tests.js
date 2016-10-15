@@ -22,6 +22,12 @@ describe("Test that constants are computed properly", function() {
     );
   });
 
+  it("should give 77 for prime numbers between 1 to 19", function() {
+    assert(
+      lib.sum_of_primes(19) == 77)
+    );
+  });
+
   it("should return an empty list if the input parameter is zero", function() {
     assert(
       lib.sum_of_primes(0) == [])
