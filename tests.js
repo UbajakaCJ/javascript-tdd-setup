@@ -34,4 +34,10 @@ describe("Test that constants are computed properly", function() {
     );
   });
 
+  it("should return an empty list if the input parameter is a dictionary", function() {
+    assert(
+      lib.sum_of_primes({title: "name"}) == [])
+    );
+  });
+
 });
